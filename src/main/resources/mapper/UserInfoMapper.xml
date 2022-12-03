@@ -1,0 +1,53 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.UserInfoMapper">
+	<insert id="insertUser" parameterType="userInfoVO">
+		INSERT INTO
+		  USER_INFO(UI_NUM, 
+		  			UI_ID,
+		  			UI_PASSWORD,
+		  			UI_NAME,
+		  			UI_PROFILE)
+		  	 VALUES(
+		  	 		#{uiNum},
+		  	 		#{uiId},
+		  	 		#{uiPassword},
+		  	 		#{uiName},
+		  	 		#{uiProfile}
+		  	 		)
+	</insert>
+	
+	<update id="updateUser" parameterType="userInfoVO">
+		UPDATE USER_INFO
+		   SET UI_PASSWORD 	= #{uiPassword}
+		      ,UI_NAME		= #{uiName}
+		      ,UI_PROFILE	= #{uiProfile}
+		 WHERE UI_NUM		= #{uiNum}
+	</update>
+	
+	<select id="selectUser" parameterType="userInfoVO" resultType="userInfoVO">
+		SELECT UI_NUM
+			 , UI_ID
+			 , UI_PASSWORD
+			 , UI_NAME
+			 , UI_PROFILE
+	 	  FROM USER_INFO
+		 WHERE UI_NUM = #{uiNum}
+	</select>
+	
+	<select id="selectUserList" parameterType="userInfoVO" resultType="userInfoVO">
+		SELECT UI_NUM
+			 , UI_ID
+			 , UI_PASSWORD
+			 , UI_NAME
+			 , UI_PROFILE
+	 	  FROM USER_INFO
+	</select>
+	
+	<delete id="deleteUser" parameterType="userInfoVO">
+		DELETE FROM USER_INFO
+		 WHERE UI_NUM = #{uiNum}
+	</delete>
+</mapper>

@@ -11,5 +11,7 @@ public class UserVO {
 
 	private String uiNum;
 	private String uiName;
+	private String uiId;
+	private String uiPwd;
 	
 }

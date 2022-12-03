@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-안녕하세요.
+hello, This is a index page.
 </body>
 </html>
