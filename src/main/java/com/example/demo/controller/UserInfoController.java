@@ -41,7 +41,7 @@ public class UserInfoController {
 	}
 
 	@DeleteMapping("/userInfo")
-	public int deleteUser(@RequestBody UserInfoVO userInfoVo) {
-		return userInfoService.deleteUser(userInfoVo);
+	public int deleteUser(@RequestBody Long num) {
+		return userInfoService.deleteUser(num);
 	}
 }

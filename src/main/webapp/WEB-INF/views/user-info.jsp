@@ -9,6 +9,8 @@
 </head>
 <body>
 <script>
+	
+	// 등록
 	function regUser(){
 		var params = {
 				  uiId:		 $('#uiId').val()

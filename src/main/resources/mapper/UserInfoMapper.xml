@@ -46,7 +46,7 @@
 	 	  FROM USER_INFO
 	</select>
 	
-	<delete id="deleteUser" parameterType="userInfoVO">
+	<delete id="deleteUser" parameterType="Long">
 		DELETE FROM USER_INFO
 		 WHERE UI_NUM = #{uiNum}
 	</delete>

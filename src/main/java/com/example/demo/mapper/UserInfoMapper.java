@@ -14,5 +14,5 @@ public interface UserInfoMapper {
 	
 	List<UserInfoVO> selectUserList();
 	
-	int deleteUser(UserInfoVO userInfoVo);
+	int deleteUser(Long num);
 }

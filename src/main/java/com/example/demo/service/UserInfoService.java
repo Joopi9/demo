@@ -32,7 +32,7 @@ public class UserInfoService {
 		return userInfoMapper.selectUserList();
 	}
 	
-	public int deleteUser(UserInfoVO userInfoVo) {
-		return userInfoMapper.deleteUser(userInfoVo);
+	public int deleteUser(Long num) {
+		return userInfoMapper.deleteUser(num);
 	}
 }
